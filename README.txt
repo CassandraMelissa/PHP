@@ -1,0 +1,1 @@
+The final.sql, home.html, sighup.php, and login.php code and pages are all working and are fully funtional. The database was successfully dumped into the text file dbdump.txt. The entire project is fully completed and functional.
