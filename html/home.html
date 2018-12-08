@@ -1,0 +1,71 @@
+<!-- Cassandra Chavez-Suarez
+Terry COrtez 
+MYSQL Assignment-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<script type="text/javascript">
+		window.addEventListener("keyup", passMatch, false);
+
+		function passMatch(){
+			var pass;
+			var retypePass;
+			var noMatching;
+			pass = document.getElementById("password").value;
+			retypePass = document.getElementById("Retype password").value;	
+			noMatching = document.getElementById("nonmatch")
+			if(pass != retypePass){
+				noMatching.style.color = "red";
+				noMatching.innerHTML = "Passwords don't match!"
+			}
+			else{
+				noMatching.innerHTML = " ";
+			}		
+
+		}
+	</script>
+</head>
+<body>
+	<form method = "post" action="login.php">
+		<h1>Registered Users</h1>
+		<p>
+			<label>User: <input type="text" name="username"></label>
+		</p>
+		<p>
+			<label>Password: <input type="password" name="password"></label>
+		</p>
+		<p>
+			<input type="submit" name="login" value="Log in">
+		</p>
+	</form>
+	<form method="post" action="signup.php">
+		<h1>New Users</h1>
+		<p>
+			<label>First Name: <input type="text" name="firstName"></label>
+		</p>
+		<p>
+			<label>Last Name: <input type="text" name="lastName"></label>
+		</p>
+		<p>
+			<label>Phone: <input type="text" name="phone" placeholder="###-###-####" pattern="\d{3}-\d{3}-\d{4}"></label>
+		</p>
+		<p>
+			<label>Email: </label><input type="text" name="email" placeholder="sample@sample.com">
+		</p>
+		<p>
+			<label>Username: <input type="text" name="username"></label>
+		</p>
+		<p>
+			<label>Password: <input type="password" name="password" id="password"></label>
+		</p>
+		<p>
+			<label>Retype Password: <input type="password" name="Retype password" id="Retype password"><span id="nonmatch"></span></label>
+		</p>
+		<p>
+			<input type="submit" name="signup" value="Sign Up">
+		</p>
+	</form>
+</body>
+</html>
